@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1049109572199",
+    "project_id": "chatapp-4969f",
+    "storage_bucket": "chatapp-4969f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049109572199:android:9a9fa3072b6aa8920182c2",
+        "android_client_info": {
+          "package_name": "com.kolee.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049109572199-qfg6unhcouijo736fubot0g574mtarnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoBZ8DJOQrbxla6U9B6gkwZJDKxy6B7ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049109572199-qfg6unhcouijo736fubot0g574mtarnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

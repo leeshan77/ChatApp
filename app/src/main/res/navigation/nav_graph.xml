@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/permissionFragment">
+
+    <fragment
+        android:id="@+id/friendListFragment"
+        android:name="com.kolee.chatapp.FriendListFragment"
+        android:label="fragment_friend_list"
+        tools:layout="@layout/fragment_friend_list" >
+        <action
+            android:id="@+id/action_friendListFragment_to_chatLogFragment"
+            app:destination="@id/chatLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kolee.chatapp.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.kolee.chatapp.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:popUpTo="@id/chatRoomFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="com.kolee.chatapp.ChatRoomFragment"
+        android:label="fragment_chat_room"
+        tools:layout="@layout/fragment_chat_room" >
+        <action
+            android:id="@+id/action_chatRoomFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_chatRoomFragment_to_chatLogFragment"
+            app:destination="@id/chatLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.kolee.chatapp.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/chatLogFragment"
+        android:name="com.kolee.chatapp.ChatLogFragment"
+        android:label="fragment_chat_log"
+        tools:layout="@layout/fragment_chat_log" >
+        <argument
+            android:name="roomKey_selected"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_chatLogFragment_to_createGroupRoomFragment"
+            app:destination="@id/createGroupRoomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupRoomFragment"
+        android:name="com.kolee.chatapp.CreateGroupRoomFragment"
+        android:label="fragment_create_group_room"
+        tools:layout="@layout/fragment_create_group_room" >
+        <action
+            android:id="@+id/action_createGroupRoomFragment_to_chatLogFragment"
+            app:destination="@id/chatLogFragment" />
+        <argument
+            android:name="roomUsers_selected"
+            app:argType="string[]" />
+        <argument
+            android:name="current_roomKey"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.kolee.chatapp.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" >
+        <action
+            android:id="@+id/action_permissionFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
+    </fragment>
+</navigation>
